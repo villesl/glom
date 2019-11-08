@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  script(type="text/javascript", src='javascripts/client.js')
+  div(class="info", id="info")
+    h1= title
+    p #{username}
+    p Gloomhaven Layout-of-the-deck Online Manager
+    button(id="paljastanappi") Reveal
+    div(class="divider")
+    button(id="sekoita") Shuffle
+    div(class="divider")
+    button(id="siunaa") Blesses
+    div(class="divider")
+    button(id="kiroa") Curses
+    br
+    p(id="korttilaskin")
+    | 
+    b(id="sekoitapliis")
+  div(class="deck", id="deck")
+  div(class="deckcontrol", id="deckcontrol")
+    a(href='#', id="resetdeck") Reset deck
+    | 
+    a(href='#', id="getdeck") Show deck
+    br
+    a(href='#', id="newdeck") Upload deck
+    | 
+    a(href='#', id="savedeck") Save deck
+  div(class="karkit", id="karkit")
+    p(id="crittsans")
+    |
+    p(id="misstsans")
